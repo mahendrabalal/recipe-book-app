@@ -6,7 +6,7 @@ const Footer = () => {
     <p>
         View the project on GitHub: 
         {' '}
-        <a href="https://github.com/mahendrabalal" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/mahendrabalal/recipe-book-app" target="_blank" rel="noopener noreferrer">
           Mahendra Balal
         </a>
       </p>

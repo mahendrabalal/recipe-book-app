@@ -17,7 +17,6 @@ function List({ data, onDelete, onAddToCart }) {
 
   return (
     <div>
-      <AddItemForm onAddItem={handleAddItem} />
       <ul>
         {items && items.length > 0 ? (
           items.map(item => (

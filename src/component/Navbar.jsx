@@ -7,8 +7,8 @@ const Navbar = () => {
         <nav className="navbar">
           <div className="navbar-logo">
             <img src={logo} alt="Logo" width="200" />
-            <h1>My React App</h1>
           </div>
+          <h1>Welcome To Barbacua Restaurant</h1>
         </nav>
       );
     };

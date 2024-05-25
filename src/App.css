@@ -27,10 +27,19 @@ li img {
   width: 200px;
 }
 .navbar {
+  background-color: white;
+  display: flex;
+  
+}
+.navbar-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
   grid-area: navbar;
-  background-color: rgb(231, 223, 223);
+  background-color: rgba(235, 231, 231, 0.016);
   border-radius: 5px;
   margin: 1px;
+  background-color: #ccc;
 }
 
 .sidebar {

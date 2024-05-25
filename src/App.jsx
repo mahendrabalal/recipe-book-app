@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useNavigate} from 'react-router-dom';
 import Navbar from './component/Navbar';
 import './App.css';
 import Sidebar from './component/Sidebar';
@@ -27,7 +27,7 @@ function App() {
     setCartItems([...cartItems, item]);
   };
   const handleAddNewItem = (newItem) => {
-  setItems([...Items, newItem])
+  setRecipes([newItem, ...recipes]);
   }
 
   return (
@@ -40,7 +40,7 @@ function App() {
       <Route path="home/" element={<Home recipes={recipes} onDelete={handleDelete} onAddToCart={handleAddToCart} />} />
       <Route path="/" element={<DashboardPage recipes={recipes} onDelete={handleDelete} onAddToCart={handleAddToCart} />} />
         <Route path ="/about" element={<AboutPage />} />
-        <Route path ="/addItems" element={<AddItemForm />} />
+        <Route path ="/addItems" element={<AddItemForm onAddItem={handleAddNewItem} data={recipes} ondelete={handleDelete} onAddToCart={handleAddToCart}/>} />
         <Route path="/item/:id" element={<ItemDetails recipes={recipes} />} />
         <Route path="/list" element={<List data={recipes} onDelete={handleDelete} onAddToCart={handleAddToCart} />} />
         <Route path="*" element={ <NotFoundPage/> } />
